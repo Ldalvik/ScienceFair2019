@@ -24,18 +24,63 @@
             android:progressDrawable="@drawable/seekbar_style"
             android:thumb="@drawable/custom_thumb" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="LEFT WHEEL"
-            android:textAlignment="center" />
 
-        <Button
-            android:id="@+id/nitro"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="speedy boi" />
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="trimLeftIncrease"
+                android:text="+" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="trimLeftReset"
+                android:text="Reset Left Trim" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="trimLeftDecrease"
+                android:text="-" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="trimRightIncrease"
+                android:text="+" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="trimRightReset"
+                android:text="Reset Right Trim" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="trimRightDecrease"
+                android:text="-" />
+
+        </LinearLayout>
 
         <SeekBar
             android:id="@+id/forward"
@@ -47,15 +92,10 @@
             android:progressDrawable="@drawable/seekbar_style"
             android:thumb="@drawable/custom_thumb" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="RIGHT WHEEL"
-            android:layout_marginTop="120dp"
-            android:textAlignment="center" />
 
         <SeekBar
             android:id="@+id/rightWheel"
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:max="500"
@@ -63,6 +103,25 @@
             android:progressDrawable="@drawable/seekbar_style"
             android:thumb="@drawable/custom_thumb"
             />
+
+        <Switch
+            android:id="@+id/headlights"
+            android:layout_gravity="center"
+            android:text="Headlights "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <SeekBar
+            android:id="@+id/red"
+            android:layout_width="match_parent"
+            android:max="255"
+            android:layout_height="wrap_content" />
+
+        <SeekBar
+            android:id="@+id/green"
+            android:max="255"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
